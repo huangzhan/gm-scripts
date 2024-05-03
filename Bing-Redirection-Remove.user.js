@@ -13,8 +13,8 @@
 (function() {
     'use strict';
 
-    function fixURL() {
-        const res = document.querySelector("ol#b_results");
+    function fixURL(elements) {
+        const res = document.querySelector(elements);
         if (!res) {
             return;
         }
@@ -38,11 +38,12 @@
         }
     }
 
-    fixURL();
+    fixURL("ol#b_results");
+    fixURL("ol#b_context");
 
     const callback = (mutationList, observer) => {
         for (const mutation of mutationList) {
-            for(let node of mutation.addedNodes) {
+            for (let node of mutation.addedNodes) {
                 if (node.id === "b_content") {
                     fixURL();
                 }
