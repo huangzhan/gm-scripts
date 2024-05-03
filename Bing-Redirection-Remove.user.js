@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bing Redirection Remove
 // @namespace    https://github.com/huangzhan/gm-scripts
-// @version      0.2
+// @version      0.3
 // @description  Just remove redirection from Bing search results
 // @author       Huang Zhan
 // @match        https://*.bing.com/*
