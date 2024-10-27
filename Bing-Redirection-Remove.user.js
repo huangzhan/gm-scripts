@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bing Redirection Remove
 // @namespace    https://github.com/huangzhan/gm-scripts
-// @version      0.3
+// @version      0.4
 // @description  Just remove redirection from Bing search results
 // @author       Huang Zhan
 // @match        https://*.bing.com/*
@@ -45,7 +45,8 @@
         for (const mutation of mutationList) {
             for (let node of mutation.addedNodes) {
                 if (node.id === "b_content") {
-                    fixURL();
+                    fixURL("ol#b_results");
+                    fixURL("ol#b_context");
                 }
             }
         }
